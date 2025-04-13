@@ -1,6 +1,5 @@
 package domain;
 
-
 import jakarta.persistence.*;
 
 @Entity
@@ -11,10 +10,13 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "nome", nullable = false, length = 100)
     private String nome;
 
+    @Column(name = "preco", nullable = false)
     private Double preco;
 
+    @Column(name = "quantidade", nullable = false)
     private Integer quantidade;
 
     public Produto() {
